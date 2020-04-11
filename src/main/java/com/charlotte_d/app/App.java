@@ -1,6 +1,6 @@
 package com.charlotte_d.app;
 
-import static spark.Spark.*;
+import com.charlotte_d.sparkpractice.SparkPractice;
 
 /**
  * Hello world!
@@ -10,7 +10,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        get("/hello", (req, res) -> "Hello World");
+        //Run the spark practice
+        SparkPractice.createBasicHelloRoute(); 
+        SparkPractice.createAdvancedHelloRoute("Hi there, ");
     }
 }

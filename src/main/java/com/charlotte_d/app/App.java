@@ -1,16 +1,30 @@
 package com.charlotte_d.app;
 
-import static spark.Spark.*;
+import java.sql.SQLException;
+
+import com.charlotte_d.mysqlpractice.MySQLPractice;
+import com.charlotte_d.sparkpractice.SparkPractice;
 
 /**
- * Hello world!
- *
+ * This is the main class that calls methods in other classes that contain the actual practice
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        get("/hello", (req, res) -> "Hello World");
+        // Run the spark practice
+        SparkPractice.createBasicHelloRoute(); 
+        SparkPractice.createAdvancedHelloRoute("Hi there, ");
+        SparkPractice.stopServer();
+        
+        // Run the SQL practice
+        MySQLPractice sqlPractice = new MySQLPractice();        
+		try {
+			String versionInfo = sqlPractice.getVersionInfo();
+			System.out.println("Version information: " + versionInfo);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+        
     }
 }

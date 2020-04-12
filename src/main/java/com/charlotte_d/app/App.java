@@ -15,6 +15,7 @@ public class App
         // Run the spark practice
         SparkPractice.createBasicHelloRoute(); 
         SparkPractice.createAdvancedHelloRoute("Hi there, ");
+        SparkPractice.stopServer();
         
         // Run the SQL practice
         MySQLPractice sqlPractice = new MySQLPractice();        

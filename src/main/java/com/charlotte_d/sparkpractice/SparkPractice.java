@@ -5,8 +5,6 @@ import static spark.Spark.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.gson.Gson;
-
 /**
  * Creates some Spark routes for practice
  */

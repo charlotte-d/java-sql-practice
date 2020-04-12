@@ -6,7 +6,7 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
 /**
- * Configuration Manager
+ * Configuration Manager: This is used to keep the database information private
  */
 public class ConfigurationManager 
 {

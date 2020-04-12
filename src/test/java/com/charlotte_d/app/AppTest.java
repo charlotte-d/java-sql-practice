@@ -1,20 +1,22 @@
 package com.charlotte_d.app;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+
+import com.charlotte_d.sparkpractice.SparkPractice;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue()
+    public void testHelloRoute()
     {
-        assertTrue( true );
+        SparkPractice.createBasicHelloRoute();
+        
+        //TODO: Not sure if this really makes sense, but I want to try connecting to the route here...
+        
+        SparkPractice.stopServer();
+        
     }
 }
